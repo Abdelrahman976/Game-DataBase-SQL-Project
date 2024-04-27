@@ -1,115 +1,108 @@
 html {
-  height: 100%;
-  background-image: url("../images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+   height: 100%;
+   background-image: url("../images/background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100%;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   height: 100%;
 }
 @font-face {
-  font-family: "minecraft";
-  src: url("../fonts/MinecraftEvenings-lgvPd.ttf") format("truetype");
-  font-weight: 1000;
-  font-style: normal;
+   font-family: "minecraft";
+   src: url("../fonts/MinecraftEvenings-lgvPd.ttf") format("truetype");
+   font-weight: 1000;
+   font-style: normal;
 }
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  height: max-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+   height: max-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 }
 .title {
-  text-align: center;
-  text-shadow: 5px 5px 1px black;
-  font-size: 72px;
-  margin-bottom: 20px;
-  color: #5dbe25;
-  font-family: "minecraft";
+   text-align: center;
+   text-shadow: 5px 5px 1px black;
+   font-size: 72px;
+   margin-bottom: 20px;
+   color: #5dbe25;
+   font-family: "minecraft";
 }
-.table-cont {
-  overflow-y: auto;
-  max-height: 60vh;
-  width: 75vw;
-  max-width: 100%;
-  font-size: larger;
-  background-color: #898989bf;
-  letter-spacing: 1px;
-  line-height: 3rem;
-  border-radius: 8px;
-  margin: 0 auto;
+.table-cont{
+   overflow-y: auto;
+   max-height: 60vh;
+   width: 75vw;
+   max-width: 100%;
+   font-size: larger;
+   background-color: #898989bf;
+   letter-spacing: 1px;
+   line-height: 3rem;
+   border-radius: 8px;
+   margin: 0 auto;
 }
-.object-display-table {
-  width: 100%;
-  border-collapse: collapse;
+.object-display-table{
+   width: 100%;
+   border-collapse: collapse;
 }
-.object-display-table > thead > tr {
-  color: white;
-  background-color: #5dbe25;
-  text-shadow: -2px 2px 4px black;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
+.object-display-table > thead > tr{
+   color: white;
+   background-color: #5dbe25;
+   text-shadow: -2px 2px 4px black;
+   position: sticky;
+   top: 0px;
+   z-index: 1;
 }
-.object-display-table > tbody > tr > td {
-  text-align: center;
-  color: white;
-  padding-top: 0;
+.object-display-table >tbody > tr > td{
+   text-align: center;
+   color: white;
+   padding-top: 0;
 }
-.object-display-table > tbody > tr:hover {
-  background-color: rgb(255 255 255 / 15%);
-}
-.object-display-table > thead > tr > th:first-child {
-  border-radius: 8px 0 0 0;
-}
-.object-display-table > thead > tr > th:last-child {
-  border-radius: 0 8px 0 0;
-}
-.btn {
-  width: 65px;
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 15px;
-  outline: none;
-  background-color: #5dbe25;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 1px 1px 5px 0px black;
+.object-display-table > tbody > tr:hover{background-color: rgb(255 255 255 / 15%)}
+.object-display-table > thead > tr > th:first-child{border-radius: 8px 0 0 0;}
+.object-display-table > thead > tr > th:last-child{border-radius: 0 8px 0 0;}
+.btn{
+   width: 65px;
+   padding: 10px 15px;
+   font-size: 16px;
+   border: none;
+   border-radius: 15px;
+   outline: none;
+   background-color: #5dbe25;
+   color: #fff;
+   cursor: pointer;
+   box-shadow: 1px 1px 5px 0px black;
 }
 a {
-  text-decoration: none;
-  color: inherit;
+   text-decoration: none;
+   color: inherit;
 }
-.btn:hover {
-  filter: brightness(0.9);
+.btn:hover{
+   filter: brightness(0.9);
 }
-.btn:active {
-  transform: scale(0.95) translateY(2px);
+.btn:active{
+   transform: scale(.95) translateY(2px);
 }
-
 .backBtn {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+   background-color: #4caf50;
+   border: none;
+   color: white;
+   padding: 10px 25px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   border-radius: 8px;
+   transition: background-color 0.3s;
 }
 .backBtn:hover {
-  background-color: #45a049;
+   background-color: #45a049;
 }

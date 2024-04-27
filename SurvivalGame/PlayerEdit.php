@@ -66,7 +66,7 @@ if (isset($_GET['PlayerID'])) {
                     <input type="number" id="zCoordinate" name="zCoordinate" value="<?php echo htmlspecialchars($player['ZCoordinate']); ?>" required>
                 </div>
             </div>
-            <button type="submit" name="update_player">Update Player</button>
+            <button type="submit" name="update_player" class="btn">Update Player</button>
         </form>
     <?php else: ?>
         <p>No player found.</p>

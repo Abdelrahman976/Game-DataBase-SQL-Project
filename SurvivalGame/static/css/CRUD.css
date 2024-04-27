@@ -1,181 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-:root{
-   --green:#27ae60;
-   --black:#333;
-   --white:#fff;
-   --bg-color:#eee;
-   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-   --border:.1rem solid var(--black);
+html {
+   height: 100%;
+   background-image: url("../images/background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
 }
 
-*{
-   font-family: 'Poppins', sans-serif;
-   margin:0; padding:0;
-   box-sizing: border-box;
-   outline: none; border:none;
-   text-decoration: none;
-   text-transform: capitalize;
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   height: 100%;
 }
-
-header {
-    background-color: #329443;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+@font-face {
+   font-family: "minecraft";
+   src: url("../fonts/MinecraftEvenings-lgvPd.ttf") format("truetype");
+   font-weight: 1000;
+   font-style: normal;
 }
-
-footer {
-    background-color: #329443;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-html{
-   font-size: 62.5%;
-   overflow-x: hidden;
-}
-
-.btn{
-   display: block;
-   width: 100%;
-   cursor: pointer;
-   border-radius: .5rem;
-   margin-top: 1rem;
-   font-size: 1.7rem;
-   padding:1rem 3rem;
-   background: var(--green);
-   color:var(--white);
-   text-align: center;
-}
-
-.btn:hover{
-   background: var(--black);
-}
-
-.message{
-   display: block;
-   background: var(--bg-color);
-   padding:1.5rem 1rem;
-   font-size: 2rem;
-   color:var(--black);
-   margin-bottom: 2rem;
-   text-align: center;
-}
-
-.container{
+.container {
    max-width: 1200px;
-   padding:2rem;
-   margin:0 auto;
-}
-
-.admin-object-form-container.centered{
+   margin: 0 auto;
+   padding: 20px;
+   height: max-content;
    display: flex;
-   align-items: center;
    justify-content: center;
-   min-height: 100vh;
-   
+   align-items: center;
+   flex-direction: column;
 }
-
-.admin-object-form-container form{
-   max-width: 50rem;
-   margin:0 auto;
-   padding:2rem;
-   border-radius: .5rem;
-   background: var(--bg-color);
-}
-
-.admin-object-form-container form h3{
-   text-transform: uppercase;
-   color:var(--black);
-   margin-bottom: 1rem;
+.title {
    text-align: center;
-   font-size: 2.5rem;
+   text-shadow: 5px 5px 1px black;
+   font-size: 72px;
+   margin-bottom: 20px;
+   color: #5dbe25;
+   font-family: "minecraft";
 }
-
-.admin-object-form-container form .box{
+.table-cont{
+   overflow-y: auto;
+   max-height: 60vh;
+   width: 75vw;
+   max-width: 100%;
+   font-size: larger;
+   background-color: #898989bf;
+   letter-spacing: 1px;
+   line-height: 3rem;
+   border-radius: 8px;
+   margin: 0 auto;
+}
+.object-display-table{
    width: 100%;
-   border-radius: .5rem;
-   padding:1.2rem 1.5rem;
-   font-size: 1.7rem;
-   margin:1rem 0;
-   background: var(--white);
-   text-transform: none;
+   border-collapse: collapse;
 }
-
-.object-display{
-   margin:2rem 0;
+.object-display-table > thead > tr{
+   color: white;
+   background-color: #5dbe25;
+   text-shadow: -2px 2px 4px black;
+   position: sticky;
+   top: 0px;
+   z-index: 1;
 }
-
-.object-display .object-display-table{
-   width: 100%;
+.object-display-table >tbody > tr > td{
    text-align: center;
+   color: white;
+   padding-top: 0;
 }
-
-.object-display .object-display-table thead{
-   background: var(--bg-color);
+.object-display-table > tbody > tr:hover{background-color: rgb(255 255 255 / 15%)}
+.object-display-table > thead > tr > th:first-child{border-radius: 8px 0 0 0;}
+.object-display-table > thead > tr > th:last-child{border-radius: 0 8px 0 0;}
+.btn{
+   width: 65px;
+   padding: 10px 15px;
+   font-size: 16px;
+   border: none;
+   border-radius: 15px;
+   outline: none;
+   background-color: #5dbe25;
+   color: #fff;
+   cursor: pointer;
+   box-shadow: 1px 1px 5px 0px black;
 }
-
-.object-display .object-display-table th{
-   padding:1rem;
-   font-size: 2rem;
+a {
+   text-decoration: none;
+   color: inherit;
 }
-
-
-.object-display .object-display-table td{
-   padding:1rem;
-   font-size: 2rem;
-   border-bottom: var(--border);
+.btn:hover{
+   filter: brightness(0.9);
 }
-
-.object-display .object-display-table .btn:first-child{
-   margin-top: 0;
-}
-
-.object-display .object-display-table .btn:last-child{
-   background: crimson;
-}
-
-.object-display .object-display-table .btn:last-child:hover{
-   background: var(--black);
-}
-
-
-
-
-
-
-
-
-
-@media (max-width:991px){
-
-   html{
-      font-size: 55%;
-   }
-
-}
-
-@media (max-width:768px){
-
-   .object-display{
-      overflow-y:scroll;
-   }
-
-   .object-display .object-display-table{
-      width: 80rem;
-   }
-
-}
-
-@media (max-width:450px){
-
-   html{
-      font-size: 50%;
-   }
-
+.btn:active{
+   transform: scale(.95) translateY(2px);
 }

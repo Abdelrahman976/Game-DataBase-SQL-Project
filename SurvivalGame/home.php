@@ -14,9 +14,9 @@ require_once "pdo.php";
 </head>
 <header>
     <nav>
-        <a href="MobsView.php"><button>Mob</button></a>
-        <a href="ToolsView.php"><button>Tools</button></a>
-        <a href="FoodView.php"><button>Food</button></a>
+        <a href="MobsView.php"><button class="btn">Mob</button></a>
+        <a href="ToolsView.php"><button class="btn">Tools</button></a>
+        <a href="FoodView.php"><button class="btn">Food</button></a>
     </nav>
 </header>
 <body>
@@ -43,7 +43,7 @@ require_once "pdo.php";
 <!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
-    <div class="scrollbox" id="databaseView">
+    <div class="table-cont" id="databaseView">
         <table class="object-display-table">
             <thead>
             <tr>
@@ -52,7 +52,7 @@ require_once "pdo.php";
                 <th>Type</th>
                 <th>TimeCreated</th>
                 <th>LastAccessed</th>
-                <th>action</th>
+                <th>Action</th>
                 <?php
                 $stmt = World::view_all();
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
@@ -67,17 +67,17 @@ require_once "pdo.php";
             <td><?php echo $row['LastAccessed']; ?></td>
             <td>
 
-            <form method="post" id="threeBtnsForm">
+            <form method="post">
                 <a href="PlayerCRUD.php?worldIDValue=<?php echo $row['WorldID'] ?>">
-                    <input type="button" id="view<?php echo $row['WorldID']; ?>" value="View">
+                    <input type="button" class="btn" id="view<?php echo $row['WorldID']; ?>" value="View">
                 </a>
 
                <a href="editProgram.php?worldIDValue=<?php echo $row['WorldID'] ?>">
-                   <input type="button" id="view<?php echo $row['WorldID']; ?>" value="Edit">
+                   <input type="button" class="btn" id="view<?php echo $row['WorldID']; ?>" value="Edit">
                </a>
 
                 <a href="inviteplayer.php?worldIDValue=<?php echo $row['WorldID'] ?>">
-                    <input type="button" id="view<?php echo $row['WorldID']; ?>" value="Invite">
+                    <input type="button" class="btn" id="view<?php echo $row['WorldID']; ?>" value="Invite">
                 </a>
             </form>
 <!--                <button  id="view--><?php //echo $row['WorldID']; ?><!--">View</button>-->

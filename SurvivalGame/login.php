@@ -53,12 +53,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <form action="login.php" method="POST" class="form">
                     <div class = "input-box">
-                        <label>Username:</label>
+                        <label>Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter your username" required>
                     </div>
 
                     <div class = "input-box">
-                        <label>PlayerID:</label>
+                        <label>PlayerID</label>
                         <input type="text" id="PlayerID" name="PlayerID" placeholder="Enter your PlayerID" required>
                     </div>
 

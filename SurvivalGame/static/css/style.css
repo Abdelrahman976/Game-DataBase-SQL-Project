@@ -104,32 +104,38 @@ cursor: pointer;
 filter: brightness(.9);
 }
 
+.table-cont{
+  overflow-y: auto;
+  max-height: 60vh;
+  max-width: 80%;
+  font-size: larger;
+  background-color: #898989bf;
+  letter-spacing: 1px;
+  line-height: 3rem;
+  border-radius: 8px;
+  margin: 0 auto;
+}
 .object-display-table{
-width: 100%;
-padding: 3px;
-font-size: larger;
-background-color: #898989bf;
-letter-spacing: 1px;
-line-height: 3rem;
-border-radius: 5px;
-border: 2px solid #000000;
+  width: 100%;
+  border-collapse: collapse;
 }
 .object-display-table > thead > tr{
-color: white;
-background-color: #5dbe25;
-text-shadow: -2px 2px 4px black;
+  color: white;
+  background-color: #5dbe25;
+  text-shadow: -2px 2px 4px black;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 .object-display-table >tbody > tr > td{
-text-align: center;
-color: white;
+  text-align: center;
+  color: white;
+  padding-top: 0;
 }
-.object-display-table > thead > tr:first-child{
-border-radius: 8px 0 0 0
-}
-.object-display-table > thead > tr:last-child{
-border-radius: 0 8px 0 0
-}
-#threeBtnsForm > a > input{
+.object-display-table > tbody > tr:hover{background-color: rgb(255 255 255 / 15%)}
+.object-display-table > thead > tr > th:first-child{border-radius: 8px 0 0 0;}
+.object-display-table > thead > tr > th:last-child{border-radius: 0 8px 0 0;}
+.btn{
 width: 65px;
 padding: 10px 15px;
 font-size: 16px;
@@ -145,11 +151,11 @@ a {
 text-decoration: none;
 color: inherit;
 }
-#threeBtnsForm > a > input:hover{
+.btn:hover{
 filter: brightness(0.9);
 }
-#threeBtnsForm > a > input:active{
-transform: scale(.95);
+.btn:active{
+  transform: scale(.95) translateY(2px);
 }
 /* .select-dropdown {
 position: relative;

@@ -40,18 +40,32 @@ if (isset($_GET['PlayerID'])) {
 <div class="container">
     <h1>Edit Player</h1>
     <?php if ($player): ?>
-        <form method="post">
+        <form method="post" class="grid-form">
             <input type="hidden" name="playerID" value="<?php echo htmlspecialchars($player['PlayerID']); ?>">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($player['Username']); ?>" required>
-            <label for="status">Status:</label>
-            <input type="text" id="status" name="status" value="<?php echo htmlspecialchars($player['Status']); ?>" required>
-            <label for="xCoordinate">X Coordinate:</label>
-            <input type="number" id="xCoordinate" name="xCoordinate" value="<?php echo htmlspecialchars($player['XCoordinate']); ?>" required>
-            <label for="yCoordinate">Y Coordinate:</label>
-            <input type="number" id="yCoordinate" name="yCoordinate" value="<?php echo htmlspecialchars($player['YCoordinate']); ?>" required>
-            <label for="zCoordinate">Z Coordinate:</label>
-            <input type="number" id="zCoordinate" name="zCoordinate" value="<?php echo htmlspecialchars($player['ZCoordinate']); ?>" required>
+            <div class="grid-row-1">
+                <div class="grid-column">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($player['Username']); ?>" required>
+                </div>
+                <div class="grid-column">
+                    <label for="status">Status</label>
+                    <input type="text" id="status" name="status" value="<?php echo htmlspecialchars($player['Status']); ?>" required>
+                </div>
+            </div>
+            <div class="grid-row-2">
+                <div class="grid-column">
+                    <label for="xCoordinate">X Coordinate</label>
+                    <input type="number" id="xCoordinate" name="xCoordinate" value="<?php echo htmlspecialchars($player['XCoordinate']); ?>" required>
+                </div>
+                <div class="grid-column">
+                    <label for="yCoordinate">Y Coordinate</label>
+                    <input type="number" id="yCoordinate" name="yCoordinate" value="<?php echo htmlspecialchars($player['YCoordinate']); ?>" required>
+                </div>
+                <div class="grid-column">
+                    <label for="zCoordinate">Z Coordinate</label>
+                    <input type="number" id="zCoordinate" name="zCoordinate" value="<?php echo htmlspecialchars($player['ZCoordinate']); ?>" required>
+                </div>
+            </div>
             <button type="submit" name="update_player">Update Player</button>
         </form>
     <?php else: ?>

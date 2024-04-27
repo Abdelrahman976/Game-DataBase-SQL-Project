@@ -18,58 +18,45 @@ if ($worldID !== null) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/CRUD.css">
 
     <title>Edit Player</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-        }
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        tr:hover {background-color: #f5f5f5;}
-    </style>
 </head>
 <body>
-<table>
-        <thead>
-        <tr>
-            <th>Player ID</th>
-            <th>Username</th>
-            <th>Status</th>
-            <th>XCoordinate</th>
-            <th>YCoordinate</th>
-            <th>ZCoordinate</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php foreach ($players as $player): ?>
-            <tr>
-                <td><?php echo htmlspecialchars($player['PlayerID']); ?></td>
-                <td><?php echo htmlspecialchars($player['Username']); ?></td>
-                <td><?php echo htmlspecialchars($player['Status']); ?></td>
-                <td><?php echo htmlspecialchars($player['XCoordinate']); ?></td>
-                <td><?php echo htmlspecialchars($player['YCoordinate']); ?></td>
-                <td><?php echo htmlspecialchars($player['ZCoordinate']); ?></td>
-                <td><a href="PlayerEdit.php?PlayerID=<?php echo $player['PlayerID']; ?>">Edit</a></td>
-            </tr>
-        <?php endforeach; ?>
-        </tbody>
-    </table>
-</table>
+<div class="container">
+    <h1 class="title">Edit Players in World <?=$worldID?></h1>
+        <div class="table-cont">
+            <table class="object-display-table">
+                <thead>
+                    <tr>
+                        <th>Player ID</th>
+                        <th>Username</th>
+                        <th>Status</th>
+                        <th>XCoordinate</th>
+                        <th>YCoordinate</th>
+                        <th>ZCoordinate</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($players as $player): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($player['PlayerID']); ?></td>
+                            <td><?php echo htmlspecialchars($player['Username']); ?></td>
+                            <td><?php echo htmlspecialchars($player['Status']); ?></td>
+                            <td><?php echo htmlspecialchars($player['XCoordinate']); ?></td>
+                            <td><?php echo htmlspecialchars($player['YCoordinate']); ?></td>
+                            <td><?php echo htmlspecialchars($player['ZCoordinate']); ?></td>
+                            <td>
+                                <a href="PlayerEdit.php?PlayerID=<?php echo $player['PlayerID']; ?>">
+                                    <input type="button" class="btn" value="Edit">
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

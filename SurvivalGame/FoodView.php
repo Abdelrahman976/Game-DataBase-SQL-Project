@@ -18,6 +18,11 @@ try {
 </head>
 <body>
 <div class="container">
+        <a href="./home.php">
+            <button class="backBtn">
+                <span style="font-size: 25px;">&larr;</span>
+            </button>
+        </a>
     <h1 class="title">Food Information</h1>
         <div class="table-cont">
             <table class="object-display-table">
